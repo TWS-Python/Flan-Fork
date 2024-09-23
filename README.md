@@ -1,15 +1,22 @@
-# Flan  
-[![](http://cf.way2muchnoise.eu/full_404578_Fabric_%20.svg)![](http://cf.way2muchnoise.eu/versions/404578.svg)](https://www.curseforge.com/minecraft/mc-mods/flan)  
-[![](http://cf.way2muchnoise.eu/full_493246_Forge_%20.svg)![](http://cf.way2muchnoise.eu/versions/493246.svg)](https://www.curseforge.com/minecraft/mc-mods/flan-forge)  
-[![](https://img.shields.io/modrinth/dt/Si383TIH?logo=modrinth&label=Modrinth)![](https://img.shields.io/modrinth/game-versions/Si383TIH?logo=modrinth&label=Latest%20for)](https://modrinth.com/mod/flan)  
-[![Discord](https://img.shields.io/discord/790631506313478155?color=0a48c4&label=discord)](https://discord.gg/8Cx26tfWNs)
 
-Server side land claiming mod for fabric.
+Flan
 
-You can now PR translations into the mod. Translations should go under `common/src/main/resources/data/flan/lang`
 
-To use flan in your dependencies add the following snippet to your build.gradle
-```groovy
+
+
+
+Overview
+Flan is a powerful server-side land claiming mod for Minecraft using the Fabric modding platform. Enhance your multiplayer experience by allowing players to claim and manage their territories with ease!
+
+Features
+Intuitive Land Claiming: Players can claim land easily and effectively, ensuring their builds are protected from unwanted interference.
+Customizable Permissions: Tailor land management permissions to fit your server’s needs.
+Multi-Language Support: Now you can contribute translations! Add your language under common/src/main/resources/data/flan/lang.
+Getting Started
+To include Flan in your project dependencies, add the following snippet to your build.gradle file:
+
+groovy
+Copy code
 repositories {
     maven {
         name = "Flemmli97"
@@ -18,16 +25,18 @@ repositories {
 }
 
 dependencies {    
-    //Fabric==========    
+    // Fabric Dependencies
     modCompileOnly("io.github.flemmli97:flan:${minecraft_version}-${flan_version}-${mod_loader}:api") {
-		transitive = false //Remove this if you want to have all those optional dependencies
-	}
+        transitive = false // Set to true to include optional dependencies
+    }
     modRuntime("io.github.flemmli97:flan:${minecraft_version}-${flan_version}-${mod_loader}") {
-		transitive = false //Remove this if you want to have all those optional dependencies
-	}
-    
-    //Forge==========    
-    compileOnly fg.deobf("io.github.flemmli97:flan:${minecraft_version}-${flan_version}-${mod_loader}:api")
-    runtimeOnly fg.deobf("io.github.flemmli97:flan:${minecraft_version}-${flan_version}-${mod_loader}")
+        transitive = false // Set to true to include optional dependencies
+    }
 }
-```
+Contributing
+We welcome contributions! If you'd like to submit a translation or suggest features, please join our Discord server or create a pull request on our GitHub.
+
+Support
+For any issues or support requests, please reach out on our Discord or open an issue on our GitHub repository.
+
+Thank you for choosing Flan! Enjoy building and protecting your worlds in Minecraft!
